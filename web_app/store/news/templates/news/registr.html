@@ -1,0 +1,27 @@
+{% extends 'main/layout.html' %}
+
+{% block tittle %}Форма для добавления животного{% endblock%}
+
+{% block content %}
+    <div class="features">
+        <h1>Регистрация</h1>
+        <form method="post">
+            {% csrf_token %}
+            <span>{{ error }}</span>
+
+            {{ form.username }}<br>
+            {{ form.first_name }}<br>
+            {{ form.last_name}}<br>
+            {{ form.email}}<br>
+            {{ form.password1 }}<br>
+            {{ form.password2 }}<br>
+            <div style="display: none;">
+                {{ form.role }}<br>
+            </div>
+            <button class="btn btn-success" type="submit">Зарегистрироваться</button>
+
+        </form>
+    </div>
+
+
+{% endblock%}

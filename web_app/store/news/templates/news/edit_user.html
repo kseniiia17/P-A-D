@@ -1,0 +1,26 @@
+{% extends 'main/layout.html' %}
+
+{% block tittle %}Форма для добавления пользователя{% endblock%}
+
+{% block content %}
+    <div class="features">
+        <h1>Редактирование пользователя</h1>
+        <form method="post">
+            {% csrf_token %}
+            <span>{{ error }}</span>
+
+            {{ form.username }}<br>
+            {{ form.first_name }}<br>
+            {{ form.last_name}}<br>
+            {{ form.email}}<br>
+            {% if session_user.role == "Admin" %}
+                {{ form.role}}<br>
+            {% endif %}
+
+            <button class="btn btn-success" type="submit">Редактировать</button>
+
+        </form>
+    </div>
+
+
+{% endblock%}

@@ -1,0 +1,36 @@
+{% extends 'main/layout.html' %}
+
+{% block tittle %}Новости о животных{% endblock%}
+
+{% block content %}
+    <div class="features">
+        <h1>Животные</h1>
+        {% if animals %}
+            {% for el in animals %}
+                <div class="alert alert-warning">
+                    <h3>{{el.name}}</h3>
+                    <p>Вид: {{el.cat.name}}</p>
+                    <p>Порода: {{el.cat.id_breed}}</p>
+                    <p>Возраст: {{el.age}}</p>
+                    <p>Цвет:
+                        {% for col in el.color.all %}
+                            {{col.name}}
+                        {% endfor %}
+                    </p>
+                    <a href="{% url 'news-delete' el.id %}" class="btn btn-danger">Удалить</a>
+                    <a href="{% url 'news-update' el.id %}" class="btn btn-info">Редактировать</a>
+
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Нет записей</p>
+        {% endif %}
+
+        {% for col in color %}
+            <a href="{% url 'color-delete' col.id %}" class="btn btn-outline-danger">Удалить: {{col}}</a>
+        {% endfor %}
+        <a href="{% url 'create_color' %}" class="btn btn-info">Создать цвет</a>
+    </div>
+
+
+{% endblock%}
