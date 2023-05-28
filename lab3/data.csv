@@ -1,0 +1,22 @@
+1,Leo,Siberian,10
+5,Rose,Mongrel,1
+2,Lev,Siamese,5
+10,Sharik,Mongrel,3
+8,Murka,Scottish,7
+7,Persik,Scottish,6
+3,Muska,British,2
+
+Files:  0
+Cортировка словаря:
+№1: {'name': 'Leo', 'breed': 'Siberian', 'age': '10\n'}
+№2: {'name': 'Lev', 'breed': 'Siamese', 'age': '5\n'}
+№3: {'name': 'Muska', 'breed': 'British', 'age': '2\n'}
+№5: {'name': 'Rose', 'breed': 'Mongrel', 'age': '1\n'}
+№7: {'name': 'Persik', 'breed': 'Scottish', 'age': '6\n'}
+№8: {'name': 'Murka', 'breed': 'Scottish', 'age': '7\n'}
+№10: {'name': 'Sharik', 'breed': 'Mongrel', 'age': '3\n'}
+
+Животные старше пяти лет:
+№1: {'name': 'Leo', 'breed': 'Siberian', 'age': '10\n'}
+№8: {'name': 'Murka', 'breed': 'Scottish', 'age': '7\n'}
+№7: {'name': 'Persik', 'breed': 'Scottish', 'age': '6\n'}
